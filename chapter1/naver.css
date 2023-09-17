@@ -136,3 +136,51 @@ p {
   height: 40px;
   background-color: #FFC20E;
 }
+
+.shopping {
+  gap: 5px;
+}
+
+.shopping_main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.shopping_item {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ad_title {
+  margin-left: 3rem;
+  gap: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad_title_label {
+  font-weight: 1000;
+  font-size: 1.1rem;
+}
+
+.ad_sub_title {
+  font-weight: 900;
+}
+
+.ad_sub_title_highlight {
+  color: #2539eb;
+  font-weight: 800;
+}
+
+.ad_box {
+  font-weight: 700;
+  border: 1px solid black;
+  width: 2rem;
+  height: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
