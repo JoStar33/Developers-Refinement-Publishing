@@ -1,0 +1,73 @@
+.main {
+  display: grid;
+  gap: 40px;
+  /* 신기한건 grid에서도 gap은 잘 동작함. */
+  grid-template-columns: 1fr;
+}
+
+.container-wrapper {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr;
+}
+
+.container-wrapper__title {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 200px 500px;
+}
+
+.item {
+  border: 1px solid red;
+  /* ellipsis가 상당히 잘먹음 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fr-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.fr-repeat-container {
+  display: grid;
+  /* 1fr을 6회 반복 */
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.fr-repeat-min-max-container {
+  display: grid;
+  /* 최소치 100px 최대치는 auto */
+  grid-template-columns: repeat(6, minmax(100px, auto));
+}
+
+.fr-repeat-min-max-auto-fill-container {
+  display: grid;
+  /* 설정된 너비의 갯수가 정의되지 않더라도, 이를 알아서 채워넣는 속성이다. */
+  grid-template-columns: repeat(auto-fill, minmax(80px, auto));
+}
+
+.fr-repeat-min-max-auto-fit-container {
+  display: grid;
+  /* auto-fit은 어떻게든 채우는 속성 */
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+}
+
+.grid-centering-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 컬럼의 길이지정만 가능한 grid-template-columns. 아래와 같이 grid-auto-rows를 사용하면 줄의 길이지정이 가능. */
+  grid-auto-rows: minmax(200px, auto);
+  place-items: center;
+}
+
+.grid-centering-container .item:nth-child(5) {
+  /* 한 요소만 지정해서 다음과 같이 스타일을 입히는것도 가능함 */
+	z-index: 1;
+	transform: scale(2);
+}
