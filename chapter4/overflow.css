@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 800px;
+  height: 400px;
+  border: 1px solid red;
+  display: flex;
+}
+
+.first {
+  width: 60%;
+  height: 100%;
+  /* 그나마 overflow hidden을 주는게 최선책 */
+  /* overflow: hidden; */
+  border: 1px solid rgb(45, 72, 148);
+  display: flex;
+  flex-direction: column;
+}
+
+.second {
+  width: 40%;
+  height: 100%;
+  border: 1px solid green;
+  display: inline;
+}
+
+.first p {
+  /* width: 100%; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.block {
+  /* 재밌는 점은, 다양한 요소(길이가 잡혀있는)들을 감싸고 있는 최상단 요소에 flex를 주면, 길이가 어떻든간에 우겨넣음. */
+  display: flex;
+}
+
+.block__element {
+  width: 60px;
+  height: 60px;
+  background-color: aqua;
+}
