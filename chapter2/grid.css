@@ -24,9 +24,6 @@
 
 .item {
   border: 1px solid red;
-  /* ellipsis가 상당히 잘먹음 */
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .fr-container {
@@ -68,6 +65,6 @@
 
 .grid-centering-container .item:nth-child(5) {
   /* 한 요소만 지정해서 다음과 같이 스타일을 입히는것도 가능함 */
-	z-index: 1;
-	transform: scale(2);
+  z-index: 1;
+  transform: scale(2);
 }
